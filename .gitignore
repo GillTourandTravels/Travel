@@ -1,0 +1,20 @@
+cat > .gitignore <<EOF
+node_modules/
+.next/
+dist/
+out/
+
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+
+.DS_Store
+
+# Keep only ONE lock file
+# If using npm:
+pnpm-lock.yaml
+# If using pnpm:
+# package-lock.json
+EOF
