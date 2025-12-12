@@ -70,7 +70,7 @@ export default function FeaturedDestinations() {
       title: "Kasol",
       description: "Peaceful riverside & nature vibes",
       price: "",
-      image: "/kasol.jpeg",
+      image: "/kas.jpeg",
     },
     {
       id: 10,
