@@ -1,12 +1,19 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import { Menu, X } from "lucide-react"
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
 
 export default function Header() {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
 
-  const navItems = ["Home", "Categories", "Destinations", "Testimonials", "Travel Tips", "Contact"]
+  const navItems = [
+    "Home",
+    "Categories",
+    "Destinations",
+    "Testimonials",
+    "Travel Tips",
+    "Contact",
+  ];
 
   return (
     <header className="sticky top-0 z-50 bg-white shadow-md">
@@ -17,7 +24,9 @@ export default function Header() {
             <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-lg">GT</span>
             </div>
-            <span className="hidden sm:inline font-bold text-primary text-lg">Gills Tours</span>
+            <span className="hidden sm:inline font-bold text-primary text-lg">
+              Gills Tours & Travels
+            </span>
           </div>
 
           {/* Desktop Navigation */}
@@ -58,5 +67,5 @@ export default function Header() {
         )}
       </div>
     </header>
-  )
+  );
 }

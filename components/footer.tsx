@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Twitter, Linkedin } from "lucide-react"
+import { Facebook, Instagram, Twitter, Linkedin } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -11,9 +11,11 @@ export default function Footer() {
               <div className="w-10 h-10 bg-accent rounded-lg flex items-center justify-center">
                 <span className="text-primary font-bold">GT</span>
               </div>
-              <span className="font-bold text-lg">Gills Tours</span>
+              <span className="font-bold text-lg">Gills Tours & Travels</span>
             </div>
-            <p className="text-sm text-primary-foreground/80">Explore Himachal with comfort and safety since 2015.</p>
+            <p className="text-sm text-primary-foreground/80">
+              Explore Himachal with comfort and safety since 2000.
+            </p>
           </div>
 
           {/* Quick Links */}
@@ -58,19 +60,19 @@ export default function Footer() {
           <div>
             <h3 className="font-bold mb-4">Follow Us</h3>
             <div className="flex gap-4">
-              <a
+              {/* <a
                 href="#"
                 className="p-2 bg-primary-foreground/20 rounded-full hover:bg-primary-foreground/30 transition-colors"
               >
                 <Facebook size={20} />
-              </a>
+              </a> */}
               <a
-                href="#"
+                href="https://www.instagram.com/gillholidays0095?igsh=MWkybDMwczM1d3pwZA=="
                 className="p-2 bg-primary-foreground/20 rounded-full hover:bg-primary-foreground/30 transition-colors"
               >
                 <Instagram size={20} />
               </a>
-              <a
+              {/* <a
                 href="#"
                 className="p-2 bg-primary-foreground/20 rounded-full hover:bg-primary-foreground/30 transition-colors"
               >
@@ -81,7 +83,7 @@ export default function Footer() {
                 className="p-2 bg-primary-foreground/20 rounded-full hover:bg-primary-foreground/30 transition-colors"
               >
                 <Linkedin size={20} />
-              </a>
+              </a> */}
             </div>
           </div>
         </div>
@@ -92,5 +94,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }
