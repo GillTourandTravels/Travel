@@ -10,9 +10,9 @@ export default function Header() {
     "Home",
     "Categories",
     "Destinations",
-    "Testimonials",
-    "Travel Tips",
-    "Contact",
+    // "Testimonials",
+    // "Travel Tips",
+    // "Contact",
   ];
 
   return (

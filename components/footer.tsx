@@ -45,45 +45,61 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Services */}
+          {/* SERVICES SECTION 1 */}
           <div>
             <h3 className="font-bold mb-4">Services</h3>
-            <ul className="space-y-2 text-sm">
-              <li>Local Sightseeing</li>
-              <li>Outstation Trips</li>
-              <li>Airport Transfers</li>
-              <li>Holiday Packages</li>
-            </ul>
+            <div className="grid grid-cols-2 gap-2 text-xs leading-relaxed">
+              <span>Himachal Tour Packages</span>
+              <span>Shimla Tour</span>
+              <span>Manali Tour</span>
+              <span>Kullu Manali Package</span>
+
+              <span>Spiti Valley Tour</span>
+              <span>Kasol Tour</span>
+              <span>Dharamshala Tour</span>
+              <span>Dalhousie Tour</span>
+
+              <span>Honeymoon Packages</span>
+              <span>Family Packages</span>
+              <span>Adventure Tours</span>
+              <span>Paragliding Tour</span>
+
+              <span>River Rafting</span>
+              <span>Trekking Packages</span>
+            </div>
           </div>
 
-          {/* Social Media */}
+          {/* SERVICES SECTION 2 */}
+          <div>
+            <h3 className="font-bold mb-4">More Services</h3>
+            <div className="grid grid-cols-2 gap-2 text-xs leading-relaxed">
+              <span>Local Sightseeing</span>
+              <span>Outstation Taxi</span>
+              <span>Airport Transfers</span>
+              <span>Railway Transfers</span>
+
+              <span>Chandigarh to Manali Cab</span>
+              <span>Delhi to Shimla Taxi</span>
+              <span>Ahmedabad to Himachal Tour</span>
+              <span>Mumbai to Himachal Tour</span>
+
+              <span>Bangalore to Himachal Trip</span>
+              <span>Hyderabad to Manali Tour</span>
+              <span>Kolkata to Himachal Tour</span>
+              <span>Rajasthan to Himachal Package</span>
+            </div>
+          </div>
+
+          {/* SOCIAL */}
           <div>
             <h3 className="font-bold mb-4">Follow Us</h3>
             <div className="flex gap-4">
-              {/* <a
-                href="#"
-                className="p-2 bg-primary-foreground/20 rounded-full hover:bg-primary-foreground/30 transition-colors"
-              >
-                <Facebook size={20} />
-              </a> */}
               <a
                 href="https://www.instagram.com/gillholidays0095?igsh=MWkybDMwczM1d3pwZA=="
                 className="p-2 bg-primary-foreground/20 rounded-full hover:bg-primary-foreground/30 transition-colors"
               >
                 <Instagram size={20} />
               </a>
-              {/* <a
-                href="#"
-                className="p-2 bg-primary-foreground/20 rounded-full hover:bg-primary-foreground/30 transition-colors"
-              >
-                <Twitter size={20} />
-              </a>
-              <a
-                href="#"
-                className="p-2 bg-primary-foreground/20 rounded-full hover:bg-primary-foreground/30 transition-colors"
-              >
-                <Linkedin size={20} />
-              </a> */}
             </div>
           </div>
         </div>
