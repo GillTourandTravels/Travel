@@ -27,7 +27,7 @@ export default function Hero() {
           Explore Himachal With Comfort & Safety
         </h1>
         <p className="text-lg sm:text-xl text-shadow-black/90 mb-8 text-pretty">
-          Trusted for 25 years by Happy Customers
+          Trusted for 25 years by Happy Customersss
         </p>
 
         {/* CTA Buttons */}
