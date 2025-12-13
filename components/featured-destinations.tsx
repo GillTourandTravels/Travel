@@ -12,7 +12,7 @@ export default function FeaturedDestinations() {
     {
       id: 1,
       title: "Shimla",
-      description: "Experience the charm of the Queen of Hills",
+      description: "Experience the Queen of Hills",
       price: "",
       image: "/shimla-hill-station.jpg",
     },

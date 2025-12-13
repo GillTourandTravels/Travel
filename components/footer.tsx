@@ -100,6 +100,9 @@ export default function Footer() {
               >
                 <Instagram size={20} />
               </a>
+              <span>Call Now : 9218921595
+
+              </span>
             </div>
           </div>
         </div>
