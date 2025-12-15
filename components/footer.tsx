@@ -100,9 +100,10 @@ export default function Footer() {
               >
                 <Instagram size={20} />
               </a>
-              <span>Call Now : 9218921595
+              <span>Call Now : +91 9218921595
 
               </span>
+              <span>Address: Shimla, Himachal Pradesh, India </span>
             </div>
           </div>
         </div>
