@@ -137,7 +137,7 @@ function PrivacyContent() {
       <section>
         <h3 className="font-semibold text-gray-900 mb-2">9. Contact Information</h3>
         <p>
-          <strong>Gills Tours & Travels</strong><br />
+          <strong>Gills Tour & Travels</strong><br />
           Shimla, Himachal Pradesh, India<br />
           Email: lalitgillshimla@gmail.com<br />
           Phone: +91-9218921595
@@ -238,7 +238,7 @@ function TermsContent() {
       <section>
         <h3 className="font-semibold text-gray-900 mb-2">10. Contact Us</h3>
         <p>
-          <strong>Gills Tours & Travels</strong><br />
+          <strong>Gills Tour & Travels</strong><br />
           Shimla, Himachal Pradesh, India<br />
           Email: lalitgillshimla@gmail.com<br />
           Phone: +91-9218921595
