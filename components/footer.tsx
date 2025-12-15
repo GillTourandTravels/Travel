@@ -17,7 +17,7 @@ export default function Footer() {
               <div className="w-10 h-10 bg-accent rounded-lg flex items-center justify-center">
                 <span className="text-primary font-bold">GT</span>
               </div>
-              <span className="font-bold text-lg">Gills Tours & Travels</span>
+              <span className="font-bold text-lg">Gills Tour & Travels</span>
             </div>
             <p className="text-sm text-primary-foreground/80">
               Explore Himachal with comfort and safety since 2000.
