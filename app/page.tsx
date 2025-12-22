@@ -8,6 +8,7 @@ import TravelTips from "@/components/travel-tips";
 import ContactForm from "@/components/contact-form";
 import Footer from "@/components/footer";
 import CategoriesPreview from "@/components/categories";
+import GoogleReviews from "@/components/GoogleReviews";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <FeaturedDestinations />
       <WhyChooseUs />
       <WhyTravelWithUs />
+      <GoogleReviews/>
       {/* <TravelTips /> */}
       {/* <ContactForm /> */}
       <Footer />
