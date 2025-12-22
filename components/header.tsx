@@ -25,7 +25,7 @@ export default function Header() {
               <span className="text-white font-bold text-lg">GT</span>
             </div>
             <span className="hidden sm:inline font-bold text-primary text-lg">
-              Gills Tours & Travels
+              Gills Tour & Travels
             </span>
           </div>
 

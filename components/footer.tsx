@@ -1,7 +1,13 @@
-import { Instagram } from "lucide-react";
+"use client";
+
+import { Instagram, } from "lucide-react";
+
+import { useState } from "react";
+import LegalModal from "./LegalModal";
 
 export default function Footer() {
-  return (
+   const [openModal, setOpenModal] = useState<"privacy" | "terms" | null>(null);
+  return ( <>
     <footer className="bg-primary text-primary-foreground">
       <div className="max-w-7xl mx-auto px-4 py-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
@@ -11,12 +17,13 @@ export default function Footer() {
               <div className="w-10 h-10 bg-accent rounded-lg flex items-center justify-center">
                 <span className="text-primary font-bold">GT</span>
               </div>
-              <span className="font-bold text-lg">Gills Tours & Travels</span>
+              <span className="font-bold text-lg">Gills Tour & Travels</span>
             </div>
             <p className="text-sm text-primary-foreground/80">
               Explore Himachal with comfort and safety since 2000.
             </p>
-          </div>
+          </div> 
+          
 
           {/* Quick Links */}
           <div>
@@ -89,6 +96,14 @@ export default function Footer() {
               <span>Rajasthan to Himachal Package</span>
             </div>
           </div>
+           {/* Quick Links */}
+            <div>
+              <h3 className="font-bold mb-4">What we Require</h3>
+              <ul className="space-y-2 text-sm">
+                <li><button onClick={() => setOpenModal("privacy")} className="hover:underline">Privacy Policy</button></li>
+                <li><button onClick={() => setOpenModal("terms")} className="hover:underline">Terms & Conditions</button></li>
+              </ul>
+            </div>
 
           {/* SOCIAL */}
           <div>
@@ -100,13 +115,12 @@ export default function Footer() {
               >
                 <Instagram size={20} />
               </a>
-              
             </div>
-            <span>Call Now : +91 9218921595
-
-              </span><br/>
-              <span>Address: Shimla, Himachal Pradesh, India </span>
+            <span>Call Now : +91 9218921595</span>
+            <br />
+            <span>Address: Shimla, Himachal Pradesh, India </span>
           </div>
+         
         </div>
 
         {/* Bottom Footer */}
@@ -115,5 +129,12 @@ export default function Footer() {
         </div>
       </div>
     </footer>
+     {openModal && (
+        <LegalModal
+          type={openModal}
+          onClose={() => setOpenModal(null)}
+        />
+      )}
+       </>
   );
 }
