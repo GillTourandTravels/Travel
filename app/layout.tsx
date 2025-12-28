@@ -10,20 +10,22 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Gills Tour & Travels - Himalayan Tours & Transfers",
+  manifest: "/manifest.json",
+  
   description:
     "Explore Himachal with comfort and safety. Book local sightseeing, outstation trips, and holiday packages with professional drivers and clean cars.",
   generator: "v0.app",
   icons: {
     icon: [
       {
-        url: "/icon-light-32x32.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/icon-dark-32x32.png",
-        media: "(prefers-color-scheme: dark)",
-      },
-      {
+      //   url: "/icon-light-32x32.png",
+      //   media: "(prefers-color-scheme: light)",
+      // },
+      // {
+      //   url: "/icon-dark-32x32.png",
+      //   media: "(prefers-color-scheme: dark)",
+      // },
+      // {
         url: "/icon.svg",
         type: "image/svg+xml",
       },
