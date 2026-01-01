@@ -116,7 +116,7 @@ export default function Footer() {
                 <Instagram size={20} />
               </a>
             </div>
-            <span>Call Now : +91 9218921595</span>
+            <span>Call Now : +91 9218921595 | +91 8894261663 </span>
             <br />
             <span>Address: Shimla, Himachal Pradesh, India </span>
           </div>

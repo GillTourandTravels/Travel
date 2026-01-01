@@ -26,9 +26,19 @@ export default function Hero() {
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4 text-balance">
           Explore Himachal With Comfort & Safety
         </h1>
-        <p className="text-lg sm:text-xl text-shadow-black/90 mb-8 text-pretty">
+        <p
+          className="
+    text-lg sm:text-xl font-semibold text-white mix-blend-difference
+    drop-shadow-[0_0_8px_rgba(56,189,248,0.7)]
+    mb-8
+  "
+        >
           Trusted for 25 years by Happy Customers
         </p>
+
+
+
+
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

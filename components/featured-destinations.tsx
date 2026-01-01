@@ -154,10 +154,13 @@ export default function FeaturedDestinations() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <Badge className="bg-accent text-accent-foreground text-sm font-semibold">
-                    Call For Enquiry {destination.price}
-                  </Badge>
+                  <a href="tel:+919218921595" className="inline-block">
+                    <Badge className="bg-accent text-accent-foreground text-sm font-semibold cursor-pointer">
+                      Call For Enquiry {destination.price}
+                    </Badge>
+                  </a>
                 </CardContent>
+
               </Card>
             ))}
           </div>
