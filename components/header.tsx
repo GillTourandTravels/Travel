@@ -98,7 +98,7 @@ export default function Header() {
 
           <p className="text-sm text-slate-600">
             Thank you for travelling with us.
-            We look forward to serving you again.
+            We look forward to serving you againn.
           </p>
 
           <button
