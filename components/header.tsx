@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import { Button } from "./ui/button";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -53,6 +54,15 @@ export default function Header() {
                   {item}
                 </a>
               ))}
+              <a href="https://blog.gillstourandtravel.com/">
+                <Button
+                  size="sm"
+                  variant="outline"
+                  className="border-accent text-accent hover:bg-accent/10 font-medium text-xs px-3 py-1 h-8"
+                >
+                  Blog
+                </Button>
+              </a>
             </nav>
 
             {/* Mobile Menu Button */}
@@ -76,6 +86,14 @@ export default function Header() {
                   {item}
                 </a>
               ))}
+              <a href="https://blog.gillstourandtravel.com/">
+                <Button
+                  size="lg"
+                  className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-sm px-4"
+                >
+                  Blog
+                </Button>
+              </a>
             </nav>
           )}
         </div>
