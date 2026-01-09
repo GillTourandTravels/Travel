@@ -79,27 +79,38 @@ export default function Header() {
           </div>
 
           {/* Mobile Navigation */}
-          {isOpen && (
-            <nav className="md:hidden pb-4 flex flex-col gap-2">
+          <div
+            className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out
+    ${isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}
+  `}
+          >
+            <nav className="pb-4 flex flex-col gap-2">
               {navItems.map((item) => (
                 <a
                   key={item}
                   href={`#${item.toLowerCase()}`}
+                  onClick={() => setIsOpen(false)}
                   className="px-4 py-2 text-foreground hover:bg-muted rounded-lg transition-colors"
                 >
                   {item}
                 </a>
               ))}
-              <a href="https://blog.gillstourandtravel.com/">
+
+              <a
+                href="https://blog.gillstourandtravel.com/"
+                onClick={() => setIsOpen(false)}
+                className="px-4"
+              >
                 <Button
                   size="lg"
-                  className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-sm px-4"
+                  className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-sm"
                 >
                   Blog
                 </Button>
               </a>
             </nav>
-          )}
+          </div>
+
         </div>
       </header>
 

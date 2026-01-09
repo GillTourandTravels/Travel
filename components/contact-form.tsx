@@ -44,7 +44,7 @@ No. of Persons: ${persons}
     return (
         <section id="contact" className="w-full max-w-xl mx-auto py-12 px-4">
             {!showForm && !submitted && (
-                <div className="text-center">
+                <div className="text-center py-12 scroll-mt-24">
                     <Button
                         className="px-8 py-3 text-lg font-semibold"
                         onClick={() => setShowForm(true)}
