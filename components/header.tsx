@@ -8,7 +8,7 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [showThankYou, setShowThankYou] = useState(false);
 
-  const navItems = ["Home", "Categories", "Destinations"];
+  const navItems = ["Home", "Categories", "Destinations", "Contact"];
 
   const handleLogoClick = () => {
     setShowThankYou(true);
@@ -39,8 +39,12 @@ export default function Header() {
               </div>
 
               <span className="font-bold text-primary text-base sm:text-lg whitespace-nowrap">
-                Gills Tour & Travels
+                Gills Tour & Travels Shimla Taxi
               </span>
+              <span className="hidden sm:inline font-light text-primary text-sm">
+                Taxi Service in Shimla | Cabs in Shimla | Best Affordable Taxi
+              </span>
+
             </div>
 
             {/* Desktop Navigation */}

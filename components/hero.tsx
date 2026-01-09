@@ -35,6 +35,15 @@ export default function Hero() {
         >
           Trusted for 25 years by Happy Customers
         </p>
+        <p
+          className="
+    text-lg sm:text-xl font-semibold text-white mix-blend-difference
+    drop-shadow-[0_0_8px_rgba(56,189,248,0.7)]
+    mb-8
+  "
+        >
+          One-Way Cabs, Airport Pickup & Drop, Tempo Travellers & Tour Packages
+        </p>
 
 
 

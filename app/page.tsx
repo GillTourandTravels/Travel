@@ -5,7 +5,7 @@ import FeaturedDestinations from "@/components/featured-destinations";
 import WhyChooseUs from "@/components/why-choose-us";
 import WhyTravelWithUs from "@/components/why-travel-with-us";
 // import TravelTips from "@/components/travel-tips";
-// import ContactForm from "@/components/contact-form";
+import ContactForm from "@/components/contact-form";
 import Footer from "@/components/footer";
 import CategoriesPreview from "@/components/categories";
 import GoogleReviews from "@/components/GoogleReviews";
@@ -18,11 +18,11 @@ export default function Home() {
       <Categories />
 
       <FeaturedDestinations />
+      <ContactForm />
       <WhyChooseUs />
       <WhyTravelWithUs />
-      <GoogleReviews/>
+      <GoogleReviews />
       {/* <TravelTips /> */}
-      {/* <ContactForm /> */}
       <Footer />
     </main>
   );
