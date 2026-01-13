@@ -10,133 +10,131 @@ export default function Header() {
 
   const navItems = ["Home", "Categories", "Destinations", "Contact"];
 
-  const handleLogoClick = () => {
-    setShowThankYou(true);
-  };
-
   useEffect(() => {
     if (!showThankYou) return;
-
-    const timer = setTimeout(() => {
-      setShowThankYou(false);
-    }, 10000); // 10 seconds
-
+    const timer = setTimeout(() => setShowThankYou(false), 8000);
     return () => clearTimeout(timer);
   }, [showThankYou]);
 
   return (
     <>
-      <header className="sticky top-0 z-50 bg-white shadow-md">
+      {/* HEADER */}
+      <header className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            {/* Logo */}
-            <div className="flex items-center gap-2">
-              <div
-                onClick={handleLogoClick}
-                className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center cursor-pointer transition-transform active:scale-95"
+          <div className="flex items-center justify-between h-16 gap-4">
+
+            {/* BRAND */}
+            <div className="flex items-center gap-3 min-w-0">
+              <button
+                onClick={() => setShowThankYou(true)}
+                className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center active:scale-95 transition"
+                aria-label="Gills Tour & Travels"
               >
                 <span className="text-white font-bold text-lg">GT</span>
+              </button>
+
+              <div className="min-w-0">
+                <p className="font-bold text-primary text-sm sm:text-base truncate">
+                  Gills Tour & Travels
+                </p>
+                <p className="hidden sm:block text-xs text-muted-foreground line-clamp-1">
+                  Shimla Taxi Service • Cabs in Shimla • Affordable Travel
+                </p>
               </div>
-
-              <span className="font-bold text-primary text-base sm:text-lg whitespace-nowrap">
-                Gills Tour & Travels Shimla Taxi
-              </span>
-              <span className="hidden sm:inline font-light text-primary text-sm">
-                Taxi Service in Shimla | Cabs in Shimla | Best Affordable Taxi
-              </span>
-
             </div>
 
-            {/* Desktop Navigation */}
-            <nav className="hidden md:flex gap-8">
+            {/* DESKTOP NAV */}
+            <nav className="hidden md:flex items-center gap-8">
               {navItems.map((item) => (
                 <a
                   key={item}
                   href={`#${item.toLowerCase()}`}
-                  className="text-foreground hover:text-primary transition-colors font-medium text-sm"
+                  className="text-sm font-medium text-foreground hover:text-primary transition"
                 >
                   {item}
                 </a>
               ))}
+
               <a href="https://blog.gillstourandtravel.com/">
                 <Button
                   size="sm"
                   variant="outline"
-                  className="border-accent text-accent hover:bg-accent/10 font-medium text-xs px-3 py-1 h-8"
+                  className="border-primary text-primary hover:bg-primary/10"
                 >
                   Blog
                 </Button>
               </a>
             </nav>
 
-            {/* Mobile Menu Button */}
+            {/* MOBILE TOGGLE */}
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="md:hidden p-2 text-foreground hover:bg-muted rounded-lg transition-colors"
+              className="md:hidden p-2 rounded-lg hover:bg-muted transition"
+              aria-label="Toggle menu"
             >
-              {isOpen ? <X size={24} /> : <Menu size={24} />}
+              {isOpen ? <X size={22} /> : <Menu size={22} />}
             </button>
           </div>
 
-          {/* Mobile Navigation */}
+          {/* MOBILE NAV */}
           <div
-            className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out
-    ${isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}
-  `}
+            className={`md:hidden transition-all duration-300 ease-in-out overflow-hidden
+              ${isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}
+            `}
           >
-            <nav className="pb-4 flex flex-col gap-2">
+            <nav className="py-4 flex flex-col gap-1">
               {navItems.map((item) => (
                 <a
                   key={item}
                   href={`#${item.toLowerCase()}`}
                   onClick={() => setIsOpen(false)}
-                  className="px-4 py-2 text-foreground hover:bg-muted rounded-lg transition-colors"
+                  className="px-4 py-2 rounded-lg text-sm hover:bg-muted transition"
                 >
                   {item}
                 </a>
               ))}
 
-              <a
-                href="https://blog.gillstourandtravel.com/"
-                onClick={() => setIsOpen(false)}
-                className="px-4"
-              >
-                <Button
-                  size="lg"
-                  className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-sm"
+              <div className="px-4 pt-2">
+                <a
+                  href="https://blog.gillstourandtravel.com/"
+                  onClick={() => setIsOpen(false)}
                 >
-                  Blog
-                </Button>
-              </a>
+                  <Button className="w-full bg-primary hover:bg-primary/90">
+                    Visit Blog
+                  </Button>
+                </a>
+              </div>
             </nav>
           </div>
-
         </div>
       </header>
 
-      {/* THANK YOU POP CARD */}
+      {/* THANK YOU MODAL */}
       <div
-        className={`fixed inset-0 z-[999] flex items-center justify-center bg-black/50 transition-opacity duration-300 ${showThankYou ? "opacity-100" : "opacity-0 pointer-events-none"
-          }`}
+        className={`fixed inset-0 z-[999] flex items-center justify-center bg-black/50 transition-opacity
+          ${showThankYou ? "opacity-100" : "opacity-0 pointer-events-none"}
+        `}
         onClick={() => setShowThankYou(false)}
       >
         <div
           onClick={(e) => e.stopPropagation()}
-          className={`bg-white rounded-xl shadow-xl px-6 py-5 max-w-sm w-full text-center transform transition-all duration-300 ${showThankYou ? "scale-100 translate-y-0" : "scale-95 translate-y-2"
-            }`}
+          className={`bg-white rounded-2xl shadow-2xl px-6 py-5 max-w-sm w-[90%] text-center
+            transform transition-all duration-300
+            ${showThankYou ? "scale-100 translate-y-0" : "scale-95 translate-y-2"}
+          `}
         >
           <h3 className="text-lg font-bold text-primary mb-2">
-            Thank You 🙏
+            Thank You
           </h3>
 
-          <p className="text-sm text-slate-600">
+          <p className="text-sm text-muted-foreground">
             Thank you for travelling with us.
-            We look forward to serving you againn.
+            We look forward to serving you again.
           </p>
 
           <button
             onClick={() => setShowThankYou(false)}
-            className="mt-4 text-sm text-primary underline"
+            className="mt-4 text-sm font-medium text-primary underline"
           >
             Close
           </button>

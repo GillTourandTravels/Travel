@@ -7,6 +7,14 @@ export default function AllCategoriesPage() {
   const [expandedCardId, setExpandedCardId] = useState<number | null>(null);
   const [showAll, setShowAll] = useState(false);
   const sectionRef = useRef(null);
+  const [lastScrollY, setLastScrollY] = useState(0)
+
+  const categoriesRef = useRef<HTMLDivElement>(null)
+  const expandedRef = useRef<HTMLDivElement>(null)
+
+
+
+  // const visibleCategories = showAll ? categories : categories.slice(0, 4)
 
   const categories = [
     {
@@ -107,6 +115,34 @@ export default function AllCategoriesPage() {
 
   // AUTO COLLAPSE DESKTOP ONLY
   useEffect(() => {
+    if (expandedCardId && expandedRef.current) {
+      expandedRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      })
+    }
+  }, [expandedCardId])
+
+  // OPEN CARD
+  const openCard = (id: number) => {
+    setLastScrollY(window.scrollY)
+    setExpandedCardId(id)
+  }
+
+  // CLOSE CARD
+  const closeCard = () => {
+    setExpandedCardId(null)
+
+    // restore exact previous scroll
+    setTimeout(() => {
+      window.scrollTo({
+        top: lastScrollY,
+        behavior: "smooth",
+      })
+    }, 100)
+  }
+
+  useEffect(() => {
     const isMobile = window.innerWidth < 640;
 
     if (isMobile) return;
@@ -133,82 +169,92 @@ export default function AllCategoriesPage() {
     const card = categories.find((c) => c.id === expandedCardId);
     if (!card) return null;
 
+
     return (
-      <section ref={sectionRef} className="py-16 px-4 bg-background">
+      <section
+        ref={expandedRef}
+        className="py-16 px-4 bg-background min-h-screen"
+      >
         <div className="max-w-5xl mx-auto">
-          <Card className="w-full p-6 shadow-xl">
+          <Card className="p-6 sm:p-10 shadow-xl space-y-6">
             <div
-              className="h-64 bg-cover bg-center rounded-lg"
+              className="h-64 sm:h-80 rounded-xl bg-cover bg-center"
               style={{ backgroundImage: `url(${card.image})` }}
             />
 
-            <CardHeader className="mt-6">
+            <div className="space-y-4">
               <CardTitle className="text-3xl text-primary">
                 {card.title}
               </CardTitle>
-              <p className="text-lg mt-4">{card.description}</p>
-            </CardHeader>
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mt-6">
-              {card.images?.map((img, idx) => (
+              <p className="text-base sm:text-lg leading-relaxed text-muted-foreground">
+                {card.description}
+              </p>
+            </div>
+
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4">
+              {card.images.map((img, idx) => (
                 <img
                   key={idx}
                   src={img}
-                  alt="extra"
-                  className="w-full h-40 object-cover rounded-lg"
+                  alt=""
+                  className="h-40 w-full object-cover rounded-lg"
                 />
               ))}
             </div>
 
-            <div className="text-center mt-10">
+            <div className="text-center pt-8">
               <button
-                onClick={() => setExpandedCardId(null)}
-                className="px-6 py-3 bg-gray-600 text-white rounded-lg shadow hover:bg-gray-700 transition-all"
+                onClick={closeCard}
+                className="px-8 py-3 bg-primary text-white rounded-lg font-semibold hover:bg-primary/90 transition"
               >
-                Back to Categories
+                ← Back to Categories
               </button>
             </div>
           </Card>
         </div>
       </section>
-    );
+    )
   }
 
   // DEFAULT GRID
   return (
     <section
-      ref={sectionRef}
+      ref={categoriesRef}
       id="categories"
       className="py-16 px-4 bg-background"
     >
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-2">
+      <div className="max-w-7xl mx-auto space-y-12">
+        <div className="text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold">
             All Categories
           </h2>
-          <div className="h-1 w-16 bg-accent mx-auto" />
+          <div className="h-1 w-16 bg-accent mx-auto mt-2" />
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {visibleCategories.map((cat) => (
+          {visibleCategories.map(cat => (
             <Card
               key={cat.id}
-              className="overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+              className="overflow-hidden transition hover:shadow-xl hover:-translate-y-1"
             >
               <div
                 className="h-44 bg-cover bg-center"
                 style={{ backgroundImage: `url(${cat.image})` }}
               />
-              <CardHeader>
+
+              <CardHeader className="space-y-3">
                 <CardTitle className="text-lg text-primary">
                   {cat.title}
                 </CardTitle>
 
-                <p className="text-sm mt-1 line-clamp-3">{cat.description}</p>
+                <p className="text-sm line-clamp-3 text-muted-foreground">
+                  {cat.description}
+                </p>
 
                 <button
-                  onClick={() => setExpandedCardId(cat.id)}
-                  className="mt-4 px-4 py-2 bg-primary text-white rounded-md hover:bg-primary/80 transition-all"
+                  onClick={() => openCard(cat.id)}
+                  className="self-start mt-2 px-4 py-2 bg-primary text-white rounded-md text-sm font-medium hover:bg-primary/90"
                 >
                   Read More
                 </button>
@@ -218,10 +264,10 @@ export default function AllCategoriesPage() {
         </div>
 
         {!showAll && (
-          <div className="text-center mt-10">
+          <div className="text-center">
             <button
               onClick={() => setShowAll(true)}
-              className="px-6 py-3 bg-primary text-white rounded-lg shadow hover:bg-primary/80 transition-all"
+              className="px-8 py-3 bg-primary text-white rounded-lg font-semibold"
             >
               Know More
             </button>
@@ -229,5 +275,5 @@ export default function AllCategoriesPage() {
         )}
       </div>
     </section>
-  );
+  )
 }
