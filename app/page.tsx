@@ -9,6 +9,8 @@ import ContactForm from "@/components/contact-form";
 import Footer from "@/components/footer";
 import CategoriesPreview from "@/components/categories";
 import GoogleReviews from "@/components/GoogleReviews";
+import StatsStrip from "@/components/StatsStrip";
+
 
 export default function Home() {
   return (
@@ -19,6 +21,7 @@ export default function Home() {
 
       <FeaturedDestinations />
       <ContactForm />
+      <StatsStrip />
       <WhyChooseUs />
       <WhyTravelWithUs />
       <GoogleReviews />
