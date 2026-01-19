@@ -8,7 +8,7 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [showThankYou, setShowThankYou] = useState(false);
 
-  const navItems = ["Home", "Categories", "Destinations", "Contact", "fares"];
+  const navItems = ["Home", "Categories", "Destinations", "Contact", "Map"];
 
   useEffect(() => {
     if (!showThankYou) return;

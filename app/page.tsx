@@ -10,6 +10,7 @@ import Footer from "@/components/footer";
 import CategoriesPreview from "@/components/categories";
 import GoogleReviews from "@/components/GoogleReviews";
 import StatsStrip from "@/components/StatsStrip";
+import GoogleMap from "@/components/GoogleMap";
 
 
 export default function Home() {
@@ -22,6 +23,7 @@ export default function Home() {
       <FeaturedDestinations />
       <ContactForm />
       <StatsStrip />
+      <GoogleMap />
       <WhyChooseUs />
       <WhyTravelWithUs />
       <GoogleReviews />
