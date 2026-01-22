@@ -42,7 +42,7 @@ export default function Hero() {
     mb-8
   "
         >
-          One-Way Cabs, Airport Pickup & Drop, Tempo Travellers & Tour Packages
+          One-Way Cabs, Airport Pickup & Drop, Tempo Travellers & Tour Packages, Best Cab Service in Shimla, Local Taxi Service in Shimla
         </p>
 
 
@@ -70,7 +70,7 @@ export default function Hero() {
             <Button
               size="lg"
               variant="outline"
-              className="border-white text-white hover:bg-white/10 font-semibold text-lg px-8 bg-transparent"
+              className="border-white text-black hover:bg-white/10 font-semibold text-lg px-8 bg-transparent"
             >
               <MessageCircle className="mr-2" size={20} />
               WhatsApp

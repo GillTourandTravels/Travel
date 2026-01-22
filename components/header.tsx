@@ -38,7 +38,7 @@ export default function Header() {
                   Gills Tour & Travels Shimla Taxi
                 </p>
                 <p className="hidden sm:block text-xs text-muted-foreground line-clamp-1">
-                  Shimla Taxi Service • Cabs in Shimla • Affordable Travel
+                  Shimla Taxi Service • Cabs in Shimla • Affordable Travel • Taxi Service in Shimla • Shimla Cabs
                 </p>
               </div>
             </div>

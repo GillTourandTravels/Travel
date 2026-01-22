@@ -306,6 +306,8 @@ export default function Footer() {
                     <li>Chitkul & Kalpa trip</li>
                     <li>Tirthan Valley tour</li>
                     <li>Barot Valley travel</li>
+                    <li>Best Cab Service in Shimla</li>
+                    <li>Local Taxi Service in Shimla</li>
                   </ul>
                 </div>
 
@@ -318,6 +320,7 @@ export default function Footer() {
                     <li>Haridwar to Shimla trip</li>
                     <li>Jaipur to Himachal tour</li>
                     <li>Punjab to Himachal taxi</li>
+
                   </ul>
                 </div>
 
@@ -330,6 +333,8 @@ export default function Footer() {
                     <li>Dharamshala monastery visit</li>
                     <li>Yoga & wellness retreats</li>
                     <li>Temple tours in Himachal</li>
+                    <li>Taxi Service in Shimla</li>
+                    <li>Shimla Cabs</li>
                   </ul>
                 </div>
 
