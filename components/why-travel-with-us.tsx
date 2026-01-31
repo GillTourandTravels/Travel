@@ -18,7 +18,7 @@ export default function WhyTravelWithUs() {
     {
       id: 3,
       title: "Experienced Team",
-      description: "20+ years of experience in tourism",
+      description: "15+ years of experience in tourism",
       icon: Users,
     },
     {

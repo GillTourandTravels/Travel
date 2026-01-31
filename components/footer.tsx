@@ -363,7 +363,7 @@ export default function Footer() {
 
           {/* FOOTER BOTTOM */}
           <div className="border-t border-primary-foreground/20 pt-6 text-center text-sm">
-            © 2025 Gills Tour & Travels. All Rights Reserved.
+            © 2026 Gills Tour & Travels. All Rights Reserved.
           </div>
 
         </div>
