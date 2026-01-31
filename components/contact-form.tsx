@@ -70,7 +70,7 @@ Budget: ${budget}
                 <div className="text-center space-y-2">
                     <h2 className="text-2xl sm:text-3xl font-bold">Travel Enquiry</h2>
                     <p className="text-gray-500 text-sm sm:text-base">
-                        Plan your Himachal journey with Gills Tour & Travels
+                        Plan your Himachal journey with Gills Tour & Travels cabs Shimla.
                     </p>
                 </div>
 
