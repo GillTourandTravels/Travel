@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
   description:
     "Explore Himachal with comfort and safety. Book local sightseeing, outstation trips, and holiday packages with professional drivers and clean cars.",
-  generator: "v0.app",
+  generator: "Rahul",
   icons: {
     icon: [
       {
