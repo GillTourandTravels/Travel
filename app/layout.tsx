@@ -9,7 +9,7 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Gills Tour & Travels - Himalayan Tours & Transfers",
+  title: "Gills Tour & Travels Cabs Shimla - Himalayan Tours & Transfers",
   manifest: "/manifest.json",
 
   description:
@@ -18,14 +18,14 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        //   url: "/icon-light-32x32.png",
-        //   media: "(prefers-color-scheme: light)",
-        // },
-        // {
-        //   url: "/icon-dark-32x32.png",
-        //   media: "(prefers-color-scheme: dark)",
-        // },
-        // {
+        url: "/icon-light-32x32.png",
+        media: "(prefers-color-scheme: light)",
+      },
+      {
+        url: "/icon-dark-32x32.png",
+        media: "(prefers-color-scheme: dark)",
+      },
+      {
         url: "/l.png",
         type: "image/svg+xml",
       },
