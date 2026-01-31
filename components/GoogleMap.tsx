@@ -9,7 +9,7 @@ export default function GoogleMap() {
                         Find Us in Shimla
                     </h2>
                     <p className="mt-2 text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">
-                        Visit or contact <strong>Gills Tour & Travels Shimla Taxi</strong>.
+                        Visit or contact <strong>Gills Tour & Travels Cabs Shimla</strong>.
                         We are conveniently located in Shimla, Himachal Pradesh.
                     </p>
                 </div>

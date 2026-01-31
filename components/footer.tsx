@@ -220,7 +220,7 @@ export default function Footer() {
                   <span className="text-primary font-bold">GT</span>
                 </div>
                 <span className="font-bold text-lg">
-                  Gills Tour & Travels Shimla Taxi
+                  Gills Tour & Travels Cabs Shimla
                 </span>
               </div>
               <p className="text-sm text-primary-foreground/80 leading-relaxed">
@@ -363,7 +363,7 @@ export default function Footer() {
 
           {/* FOOTER BOTTOM */}
           <div className="border-t border-primary-foreground/20 pt-6 text-center text-sm">
-            © 2026 Gills Tour & Travels. All Rights Reserved.
+            © 2026 Gills Tour & Travels Cabs Shimla. All Rights Reserved.
           </div>
 
         </div>
