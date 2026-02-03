@@ -10,27 +10,29 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Gills Tour & Travels Cabs Shimla - Himalayan Tours & Transfers",
-  manifest: "/manifest.json",
-
   description:
     "Explore Himachal with comfort and safety. Book local sightseeing, outstation trips, and holiday packages with professional drivers and clean cars.",
   generator: "Rahul",
+  manifest: "/manifest.json",
+
   icons: {
-    icon: [
-      {
-        url: "/icon-light-32x32.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/icon-dark-32x32.png",
-        media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: "/l.png",
-        type: "image/svg+xml",
-      },
+    // ⭐ MOST IMPORTANT (Google Search)
+    icon: "/favicon.ico",
+
+    // Browser tab icons
+    shortcut: "/favicon-32x32.png",
+
+    // Apple devices
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180" },
+      { url: "/apple-touch-icon-180x180.png", sizes: "180x180" },
     ],
-    apple: "/l.png",
+
+    // Android / Chrome
+    other: [
+      { rel: "icon", url: "/android-chrome-192x192.png", sizes: "192x192" },
+      { rel: "icon", url: "/android-chrome-512x512.png", sizes: "512x512" },
+    ],
   },
 };
 
