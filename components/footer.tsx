@@ -308,6 +308,8 @@ export default function Footer() {
                     <li>Barot Valley travel</li>
                     <li>Best Cab Service in Shimla</li>
                     <li>Local Taxi Service in Shimla</li>
+                    <li>Taxi Price in shimla</li>
+                    <li>Taxi Price in Manali</li>
                   </ul>
                 </div>
 
