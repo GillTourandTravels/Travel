@@ -21,9 +21,9 @@ export default function Home() {
       <Categories />
 
       <FeaturedDestinations />
-      <ContactForm />
+      {/* <ContactForm /> */}
       <StatsStrip />
-      <GoogleMap />
+      {/* <GoogleMap /> */}
       <WhyChooseUs />
       <WhyTravelWithUs />
       <GoogleReviews />

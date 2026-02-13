@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { Button } from "./ui/button";
 
@@ -8,7 +9,14 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [showThankYou, setShowThankYou] = useState(false);
 
-  const navItems = ["Home", "Categories", "Destinations", "Contact", "Map"];
+  const navItems = [
+    { href: "/", label: "Home" },
+    { href: "/categories", label: "Categories" },
+    { href: "/destinations", label: "Destinations" },
+
+    { href: "/contact", label: "Contact" },
+    { href: "/location", label: "Map" },
+  ];
 
   useEffect(() => {
     if (!showThankYou) return;
@@ -34,9 +42,11 @@ export default function Header() {
               </button>
 
               <div className="min-w-0">
-                <p className="font-bold text-primary text-sm sm:text-base truncate">
-                  Gills Tour & Travels Cabs Shimla
-                </p>
+                <Link href="/" className="block">
+                  <p className="font-bold text-primary text-sm sm:text-base truncate hover:text-primary/80 transition">
+                    Gills Tour & Travels Cabs Shimla
+                  </p>
+                </Link>
                 <p className="hidden sm:block text-xs text-muted-foreground line-clamp-1">
                   Shimla Taxi Service • Cabs in Shimla • Affordable Travel • Taxi Service in Shimla • Shimla Cabs
                 </p>
@@ -46,16 +56,16 @@ export default function Header() {
             {/* DESKTOP NAV */}
             <nav className="hidden md:flex items-center gap-8">
               {navItems.map((item) => (
-                <a
-                  key={item}
-                  href={`#${item.toLowerCase()}`}
+                <Link
+                  key={item.href}
+                  href={item.href}
                   className="text-sm font-medium text-foreground hover:text-primary transition"
                 >
-                  {item}
-                </a>
+                  {item.label}
+                </Link>
               ))}
 
-              <a href="https://blog.gillstourandtravel.com/">
+              <Link href="https://blog.gillstourandtravel.com/">
                 <Button
                   size="sm"
                   variant="outline"
@@ -63,7 +73,7 @@ export default function Header() {
                 >
                   Blog
                 </Button>
-              </a>
+              </Link>
             </nav>
 
             {/* MOBILE TOGGLE */}
@@ -84,25 +94,25 @@ export default function Header() {
           >
             <nav className="py-4 flex flex-col gap-1">
               {navItems.map((item) => (
-                <a
-                  key={item}
-                  href={`#${item.toLowerCase()}`}
+                <Link
+                  key={item.href}
+                  href={item.href}
                   onClick={() => setIsOpen(false)}
                   className="px-4 py-2 rounded-lg text-sm hover:bg-muted transition"
                 >
-                  {item}
-                </a>
+                  {item.label}
+                </Link>
               ))}
 
               <div className="px-4 pt-2">
-                <a
+                <Link
                   href="https://blog.gillstourandtravel.com/"
                   onClick={() => setIsOpen(false)}
                 >
                   <Button className="w-full bg-primary hover:bg-primary/90">
                     Visit Blog
                   </Button>
-                </a>
+                </Link>
               </div>
             </nav>
           </div>
