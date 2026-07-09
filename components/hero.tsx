@@ -17,7 +17,7 @@ export default function Hero() {
           playsInline
           preload="metadata"
         >
-          <source src="/bg.mp4" type="video/mp4" />
+          <source src="/bg1.mp4" type="video/mp4" />
         </video>
       </div>
 
